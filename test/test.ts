@@ -25,6 +25,12 @@ ruleTester.run("import-rule", rule, {
     bar,
     baz,
     } from 'baz';` },
+        { code: `import SomethingDefault, {
+    foo,
+    bar,
+    baz,
+    } from 'baz';` },
+        { code: `import SomethingDefault, { foo, bar, baz } from 'baz';` },
     ],
 
     invalid: [
@@ -60,6 +66,34 @@ ruleTester.run("import-rule", rule, {
   bar,
   baz
 } from 'bar'`,
+        },
+        {
+            code: `import SomethingDefault, {
+  foo, bar,
+  baz
+  } from 'bar'`,
+            // for an invalid case we list which messageIds (or any other reported data) should be present
+            errors: [error, error],
+            output: `import SomethingDefault, {
+  foo,
+  bar,
+  baz
+} from 'bar'`,
+        },
+        {
+            code: `import SomethingDefault, { foo,
+  bar,
+  baz
+  } from 'bar'`,
+            errors: [error, error, error],
+            output: `import SomethingDefault, {foo, bar, baz} from 'bar'`,
+        },
+        {
+            code: `import SomethingDefault,{foo,
+bar,
+baz} from 'bar'`,
+            errors: [error, error, error],
+            output: `import SomethingDefault,{foo, bar, baz} from 'bar'`,
         },
     ],
 });
