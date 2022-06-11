@@ -1,7 +1,9 @@
 {
   "name": "@patrikvalkovic/eslint-plugin-import-rule",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "Reformat imports",
+  "repository": "https://github.com/PatrikValkovic/eslint-plugin-import-rule",
+  "homepage": "https://github.com/PatrikValkovic/eslint-plugin-import-rule",
   "main": "./dist/index.js",
   "files": [
     "dist/**"
