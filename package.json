@@ -1,6 +1,6 @@
 {
   "name": "@patrikvalkovic/eslint-plugin-import-rule",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Reformat imports",
   "repository": "https://github.com/PatrikValkovic/eslint-plugin-import-rule",
   "homepage": "https://github.com/PatrikValkovic/eslint-plugin-import-rule",
@@ -12,20 +12,21 @@
     "build": "tsup src/index.ts --no-splitting --minify",
     "test": "ts-node test/test.ts"
   },
-  "keywords": [],
+  "keywords": ["eslint", "eslintplugin", "eslint-plugin", "eslint-plugin-import", "import", "format", "autofix", "plugin"],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/eslint": "^8.4.3",
-    "@types/estree": "^0.0.51",
-    "@types/node": "^17.0.41",
-    "@typescript-eslint/parser": "^5.27.1",
-    "ts-node": "^10.8.1",
-    "tsup": "^6.1.0",
-    "typescript": "^4.7.3"
+    "@swc/core": "^1.6.3",
+    "@types/eslint": "^8.56.10",
+    "@types/estree": "^1.0.5",
+    "@types/node": "^20.14.7",
+    "@typescript-eslint/parser": "^7.13.1",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.1.0",
+    "typescript": "<5.5.0"
   },
   "dependencies": {
-    "eslint": "^8.17.0"
+    "eslint": "^8.0.0 || ^9.0.0"
   },
   "peerDependencies": {
     "@typescript-eslint/parser": "*"
