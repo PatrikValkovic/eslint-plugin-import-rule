@@ -1,6 +1,6 @@
 {
   "name": "@patrikvalkovic/eslint-plugin-import-rule",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Reformat imports",
   "repository": "https://github.com/PatrikValkovic/eslint-plugin-import-rule",
   "homepage": "https://github.com/PatrikValkovic/eslint-plugin-import-rule",
@@ -9,7 +9,7 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --no-splitting --minify",
+    "build": "tsup src/index.ts --dts --no-splitting --minify",
     "test": "ts-node test/test.ts"
   },
   "keywords": ["eslint", "eslintplugin", "eslint-plugin", "eslint-plugin-import", "import", "format", "autofix", "plugin"],
